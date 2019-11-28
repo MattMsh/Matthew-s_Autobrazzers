@@ -1,0 +1,13 @@
+body {
+	background-color: #1f2022;
+}
+
+h1 {
+	text-align: center;
+	color: #f7c935;
+	font-family: Raleway;
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+}
