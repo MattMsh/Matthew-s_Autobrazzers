@@ -1,18 +1,30 @@
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
 body
+    position: relative
     font-family: 'Raleway', sans-serif
     font-size: 10px
     line-height: 1.6
     margin: 0
     color: #fff
-    background-color: #252628
+    background-color: #000000
 
 *
     -webkit-box-sizing: border-box
     box-sizing: border-box
+    outline: none
 
-  &:before, &:after
-    -webkit-box-sizing: border-box
-    box-sizing: border-box
+    &:before, &:after
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
 
 h1, h2, h3, h4, h5, h6
     margin: 0
@@ -26,6 +38,11 @@ h1, h2, h3, h4, h5, h6
     margin: 0 auto
 
 //Header
+
+header
+    position: relative
+    z-index: 1000 
+    margin-bottom: 140px
 
 .header
     padding: 20px 0
@@ -250,6 +267,11 @@ h1, h2, h3, h4, h5, h6
     text-decoration: none
     color: #f7c935
     text-transform: uppercase
+    transition: .1s linear opacity
+
+
+    &:hover
+        opacity: .8
 
     &::after
         position: absolute
@@ -264,6 +286,18 @@ h1, h2, h3, h4, h5, h6
         background-size: contain
         background-repeat: no-repeat
 
+    &__element
+        font-family: 'Raleway', sans-serif
+        font-size: 14px
+        font-weight: 400
+        text-decoration: none
+        color: #f7c935
+        text-transform: uppercase
+        transition: .1s linear opacity
+
+        &:hover
+            opacity: .8
+
 .lang-switch
     opacity: 0
     position: absolute
@@ -275,14 +309,6 @@ h1, h2, h3, h4, h5, h6
     &.active
         opacity: 1
 
-.lang__text__element
-    font-family: 'Raleway', sans-serif
-    font-size: 14px
-    font-weight: 400
-    text-decoration: none
-    color: #f7c935
-    text-transform: uppercase
-
 .user__icon
     display: block
     width: 20px
@@ -291,6 +317,9 @@ h1, h2, h3, h4, h5, h6
     background-repeat: no-repeat
     background-size: contain
     margin-right: 29px
+
+    &:hover
+        filter: brightness(4)
 
 .login_btn
     display: flex
@@ -309,6 +338,11 @@ h1, h2, h3, h4, h5, h6
 
     span
         margin-right: 16px
+
+        transition: .1s linear color
+
+        &:hover
+            color: #f7c935
 
 .login_img-wrap
     max-width: 16px
@@ -352,5 +386,160 @@ h1, h2, h3, h4, h5, h6
         &:hover
             color: #f7c935
 
+//Intro
 
+.intro_background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: -2
+    background-image: url(../images/backgrounds/intro/2-layers.webp) 
+    background-repeat: no-repeat
+    background-position: center
+
+.intro 
+    width: 100%
+    padding-bottom: 120px
     
+    .container
+        position: relative
+
+    .description
+        margin-bottom: 160px
+
+        h1 
+            color: #f7c935
+            font-family: "Open Sans"
+            font-size: 42px
+            font-weight: 700
+            line-height: 30px
+            text-transform: uppercase
+            margin-bottom: 30px
+        h2 
+            color: #f7c935
+            font-family: "Open Sans"
+            font-size: 24px
+            font-weight: 400
+            line-height: 30px
+            text-transform: uppercase
+            margin-bottom: 35px
+        span
+            display: block
+            padding: 0
+            width: 551px
+            color: #ffffff
+            font-family: "Open Sans"
+            font-size: 20px
+            font-weight: 300
+            line-height: 36px
+
+    .social
+        position: absolute
+        right: 0
+        top: 45px
+        display: flex
+        flex-direction: column
+        align-items: center
+        
+        a 
+            display: block
+            padding: 0
+            margin-bottom: 40px
+
+            background-repeat: no-repeat
+
+            &:hover
+                filter: brightness(5); 
+
+        &_facebook
+            width: 25px
+            height: 26px
+            background-image: url(../images/social/facebook.webp)
+
+        &_instagram
+            width: 25px
+            height: 25px
+            background-image: url(../images/social/instagram.webp)
+
+        &_youtube
+            width: 27px
+            height: 20px
+            background-image: url(../images/social/youtube.webp)
+
+        &_telegram
+            width: 24px
+            height: 21px
+            background-image: url(../images/social/telegram.webp)
+
+    form
+        position: relative
+        width: 100%
+        height: 284px
+        box-shadow: 0 0 13px rgba(247, 201, 53, 0.07)
+        border-radius: 15px
+        border: 1px solid #f7c935
+        background-color: #000000      
+        background-image: url(../images/backgrounds/intro/car_background.webp)
+        background-repeat: no-repeat
+
+        .btn
+            position: absolute
+            padding-left: 30px
+            top: 152px
+            left: 570px
+            width: 100%
+            max-width: 445px
+            height: 54px
+            border: none
+            border-radius: 27px
+            background-color: #f7c935
+            color: #000000
+            font-family: "Open Sans"
+            font-size: 18px
+            font-weight: 700
+
+            &_submit
+                position: absolute
+                top: 154px
+                right: 65px
+                width: 100%
+                max-width: 160px
+                height: 50px
+                border-radius: 25px
+                background-color: #000000 
+                border: none 
+                color: #f7c935
+                font-family: "Open Sans"
+                font-size: 16px
+                font-weight: 700
+                cursor: pointer
+            
+            @include placeholder
+                color: #000000
+
+        .text_form
+            position: absolute
+            top: 85px
+            left: 570px
+            max-width: 500px
+            color: #ffffff
+            font-family: "Open Sans"
+            font-size: 16px
+            font-weight: 400
+            line-height: 26px 
+
+            span   
+                color: #f7c935
+                font-family: "Open Sans"
+                font-weight: 700
+                
+                    
+
+            
+            
+               
+                    
+
+        
