@@ -428,10 +428,12 @@ body {
 	align-items: center;
 	list-style: none;
 	opacity: 0;
+	visibility: hidden;
 	-webkit-transition: 0.1s;
 	transition: 0.4s;
   }
   .menu.active {
+	visibility: visible;
 	opacity: 1;
 	display: flex;
   }
