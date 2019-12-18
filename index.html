@@ -177,17 +177,33 @@
 					</div>
 				</form>
 			</div>
-		</section>
+		</section>	
 		<section class="calc">
-			<h2>
-				<p>
-				<a href="https://jigsaw.w3.org/css-validator/check/referer">
-					<img style="border:0;width:88px;height:31px"
-						src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-						alt="Правильный CSS!" />
-				</a>
-				</p>
-			</h2>
+			<div class="container">
+				<h2 class="title">
+					Калькулятор растаможки авто из США
+				</h2>
+				<form class="calc_form">
+					<div class="choice_vehicle">
+						<div class="vehicle">						
+							<input class="radio_img" type="radio" name="vehicle" id="motoButton">
+							<label class="car_label moto" for="motoButton">Мото</label>
+						</div>
+						<div class="vehicle">
+							<input class="radio_img" type="radio" name="vehicle" id="easycarButton">
+							<label class="car_label easycar" for="easycarButton">Легковые</label>
+						</div>
+						<div class="vehicle">
+							<input class="radio_img" type="radio" name="vehicle" id="electrocarButton">
+							<label class="car_label electrocar" for="electrocarButton">Электро</label>
+						</div>
+						<div class="vehicle">
+							<input class="radio_img" type="radio" name="vehicle" id="pickupButton">
+							<label class="car_label pickup" for="pickupButton">Пикап</label>
+						</div>
+					</div>
+				</form>
+			</div>
 		</section>
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
