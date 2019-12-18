@@ -429,13 +429,16 @@ body {
 	list-style: none;
 	opacity: 0;
 	visibility: hidden;
-	-webkit-transition: 0.1s;
-	transition: 0.4s;
+	transition: 0.3s ease-out transform,
+				0.26s linear opacity,
+			    0.3s linear visibility;
+    transform: translateY(10px);
   }
   .menu.active {
 	visibility: visible;
 	opacity: 1;
 	display: flex;
+	transform: translateY(0px);
   }
   .menu .menu__item a {
 	color: rgba(255, 255, 255, 0.7);
