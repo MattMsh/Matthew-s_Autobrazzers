@@ -798,6 +798,20 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+	.menu_btn {
+		position: fixed;
+		z-index: 3;
+		right: 5px;
+	}
+
+	.menu {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		max-width: unset;
+		top: 0;
+	}
+
 	.intro .description h1 {
 		font-size: 29px;
 	}
