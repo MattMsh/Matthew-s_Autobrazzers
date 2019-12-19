@@ -171,7 +171,7 @@
 							квалифицированную консультацию <span>БЕСПЛАТНО</span>
 						</div>
 						<div class="form_input">
-							<input type="text" class="btn" placeholder="+38 (0__) ___ __ __">
+							<input type="tel" name="phone" class="btn" placeholder="+38 (0__) ___ __ __">
 							<input type="submit" class="btn_submit" value="ЗАКАЗАТЬ">
 						</div>
 					</div>
@@ -190,7 +190,7 @@
 							<label class="car_label moto" for="motoButton">Мото</label>
 						</div>
 						<div class="vehicle">
-							<input class="radio_img" type="radio" name="vehicle" id="easycarButton">
+							<input class="radio_img" type="radio" name="vehicle" id="easycarButton" checked>
 							<label class="car_label easycar" for="easycarButton">Легковые</label>
 						</div>
 						<div class="vehicle">
@@ -202,11 +202,71 @@
 							<label class="car_label pickup" for="pickupButton">Пикап</label>
 						</div>
 					</div>
+					<div class="main_calc">
+						<div class="search_field">
+							<input class="search_input" type="url" placeholder="Вставте ссылку из Copart, IAAI, Manhelm">
+							<input class="scan_btn" type="submit" value="СКАНИРОВАТЬ">
+						</div>
+						<div class="prices">
+							<div class="main_prices">
+								<div class="prices_item dollar">
+									<input type="text" placeholder="Цена авто">
+									<span class="prices_icon"></span class="prices_icon">
+								</div>
+								<div class="prices_item engine">
+									<input type="text" placeholder="Объем двигателя">
+									<span class="prices_icon"></span>
+								</div>
+								<div class="prices_item calendar">
+									<input type="text" placeholder="Год выпуска">
+									<span class="prices_icon"></span>
+								</div>
+								<div class="prices_item auction">
+									<select name="auction" id="auction">
+										<option value="auction">Аукцион</option>
+										<option value="other">Другое</option>
+									</select>
+									<span class="prices_icon"></span>
+								</div>
+								<div class="prices_item protect">
+									<select name="protection" id="select_protection">
+										<option value="Yes">Да</option>
+										<option value="No">Нет</option>
+									</select>
+									<span class="prices_icon"></span>
+								</div>
+							</div>
+							<div class="other_prices">
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Агентские услуги</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Доставка по суше</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Доставка по морю</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Логистичекие расходы</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Экспедитор Одесса</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Акциз</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Пошлина</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>НДС</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Стоянка в евротерминале</label><input type="text" value="$100" disabled></div>
+								<div class="prices_item"><label for=""><span class="info_icon"></span>Страховка авто</label><input type="text" value="$100" disabled></div>
+							</div>
+						</div>
+						<div class="finish_price">
+							<span class="sum">Общая сумма:</span>
+							<div class="prices_item dollar">
+								<input type="text" value="23546">
+								<span class="prices_icon"></span class="prices_icon">
+							</div>
+						</div>
+						<a class="convert_to_pdf" href="#">
+							Cгенерировать в PDF <img src="/assets/images/calc/pdf.png" alt="convert_to_pdf">
+						</a>
+					</div>
 				</form>
 			</div>
 		</section>
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/jquery.maskedinput.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

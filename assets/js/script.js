@@ -12,3 +12,7 @@ $('.header_menu').on('click', function(e) {
 	$('.menu_btn').toggleClass('active');
 	$('.menu_text').toggleClass('active');
 })
+
+$(function(){
+	$("input[name=phone]").mask("+38 (099) 999 99 99");
+  });

@@ -32,7 +32,7 @@ body {
 
   .container {
 	width: 100%;
-	max-width: 1110px;
+	max-width: 1140px;
 	padding: 0 15px;
 	margin: 0 auto;
   }
@@ -640,16 +640,16 @@ body {
 	color: #000000;
   }
   .intro form .btn::-webkit-input-placeholder {
-	color: #000000;
+	color: #575656;
   }
   .intro form .btn:-moz-placeholder {
-	color: #000000;
+	color: #575656;
   }
   .intro form .btn::-moz-placeholder {
-	color: #000000;
+	color: #575656;
   }
   .intro form .btn:-ms-input-placeholder {
-	color: #000000;
+	color: #575656;
   }
 	
 	.form_input {
@@ -674,6 +674,13 @@ body {
   }
   
   /* Calculator */
+  .calc {
+	background-image: url(/assets/images/backgrounds/calc/asphalt-auto-automobile-2264601.webp);
+	background-repeat : no-repeat;
+	background-position: center;
+	background-size: cover;
+
+  }
 
   .calc_form {
 	  padding-top: 100px;
@@ -685,6 +692,7 @@ body {
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 30px;
   }
 
   .vehicle {
@@ -755,19 +763,288 @@ body {
 
 	border-radius: 20px;
 	border: 2px solid #f7c935;
+
+	cursor: pointer;
   }
  
   .radio_img:checked + .car_label {
 	background-color: #f7c935;
 	color: #000000;
-}
+  }
+
+  .main_calc {
+	  width: 100%;
+	  padding: 40px 80px;
+
+	  background-color: #fff;
 
 
+	  border-radius: 20px;
+  }
 
+  .search_field {
+	  display: flex;
+	  width: 100%;
+	  max-width: 950px;
+	  justify-content: space-between;
+	  margin-bottom: 30px;
+  }
+
+  .search_input {
+  display: block;
+	width: 100%;
+	max-width: 760px;
+	padding: 0 16px;
+
+	color: #333333;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 14px;
+
+	border-radius: 20px;
+	border: 2px solid #d8d8d8;
+	background-color: #ffffff;
+  }
+
+  :focus::-webkit-input-placeholder {color: transparent;}
+  :focus::-moz-placeholder          {color: transparent;}
+  :focus:-moz-placeholder           {color: transparent;}
+  :focus:-ms-input-placeholder      {color: transparent;}
+
+  .search_input:focus {
+	font-weight: 700;
+  }
+
+  .scan_btn {
+	display: block;
+	width: 100%;
+	max-width: 160px;
+	padding: 15px 27px; 
+
+	color: #000000;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 10px;
+
+	background-color: #f7c935;
+	border-radius: 20px; 
+	border: none;
+
+	cursor: pointer;
+  }
+
+  .prices {
+	width: 100%;
+	display: flex;
+	margin-bottom: 10px;
+  }
+
+  .main_prices {
+	  width: 100%;
+	  max-width: 300px;
+	  margin-right: 30px;
+  }
+
+  .prices_item {
+	position: relative;
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	padding: 8px 15px;
+
+	margin-bottom: 10px;
+
+	border-radius: 20px;
+	border: 2px solid #d8d8d8;
+	background-color: #ffffff;
+  }
+
+  .prices_item input {
+	width: calc(100% - 70px);
+	border : none;
+	padding: 0;
+	background-color: transparent;
+
+	color: rgb(1, 1, 1);
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+  }
+
+  .prices_item input:focus {
+	color: #333333;
+	font-weight: 700;
+  }
+
+  .prices_item .prices_icon {
+	position: absolute;
+	display: flex;
+	right: -2px;
+	top: -2px;
+	width: 70px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: #d8d8d8;
+  }
+
+  .prices_item .prices_icon::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70px;
+	height: 40px;
+	content: "";
+	display: block;
+	
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+
+  .prices_item.dollar .prices_icon::after {
+	background-image: url(/assets/images/calc/prices/dollar-symbol.webp);
+  }
+
+  .prices_item.engine .prices_icon::after {
+	background-image: url(/assets/images/calc/prices/motor.webp);
+  }
+  .prices_item.calendar .prices_icon::after {
+	background-image: url(/assets/images/calc/prices/calendar.webp);
+  }
+  .prices_item.auction .prices_icon::after {
+	background-image: url(/assets/images/calc/prices/auction.webp);
+  }
+  .prices_item.protect .prices_icon::after {
+	background-image: url(/assets/images/calc/prices/auto-insurance.webp);
+  }
+
+  .prices_item select {
+	  width: 80%;
+	  background-color: transparent;
+	  border: none;
+  }
+
+  .prices_item select{
+	opacity: .7;
+	color: #010101;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+  }
   
+  .other_prices {
+	  width: 100%;
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+  }
 
+  .other_prices .prices_item {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
 
+  .other_prices .prices_item label {
+	display: flex;
+	align-items: center;
 
+	color: rgba(1, 1, 1, .6);
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 400;
+  }
+
+  .other_prices .prices_item .info_icon{
+	  display: block;
+	  width: 15px;
+	  height: 15px;
+	  margin-right: 10px;
+
+	  background-image: url(/assets/images/calc/prices/information.webp);
+	  background-repeat: no-repeat;
+	  cursor: pointer;
+  }
+
+  .other_prices .prices_item input {
+	  position: relative;
+	  width: 100%;
+	  max-width: 36px;
+	  color: #000000;
+	font-family: "Open Sans";
+	font-size: 16px;
+	font-weight: 700;
+	z-index: 5;
+  }
+
+  .other_prices .prices_item::after {
+	content: "";
+	position: absolute;
+	top: -1px;
+	right: -2px;
+	width: 70px;
+	height: 40px;
+	background-color: #d8d8d8;
+	border-radius: 20px;
+	z-index: 0;
+  }
+
+  .finish_price {
+	  display: flex;
+	  justify-content: flex-end;
+	  align-items: center;
+	  margin-bottom: 20px;
+  }
+
+  .finish_price .prices_item {
+	  border-color: #f7c935;
+	  max-width: 175px;
+	  margin: 0;
+  }
+
+  .finish_price .prices_item input {
+	font-weight: 700;
+	color: #333333;
+	font-size: 16px;
+  }
+
+  .finish_price .prices_item .prices_icon {
+	  background-color : #f7c935;
+  }
+
+  .sum {
+	color: #000000;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 30px;
+	margin-right: 20px;
+  }
+
+  .convert_to_pdf {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	max-width: 222px;
+	padding: 15px 20px;
+	margin: 0 auto;
+
+	border-radius: 25px;
+	background-color: #f7c935;
+
+	color: #000000;
+	font-family: "Open Sans";
+	font-size: 13px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+  }
 
 
 
