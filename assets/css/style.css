@@ -675,7 +675,7 @@ body {
   
   /* Calculator */
   .calc {
-	background-image: url(assets/images/backgrounds/calc/asphalt-auto-automobile-2264601.webp);
+	background-image: url(../images/backgrounds/calc/asphalt-auto-automobile-2264601.webp);
 	background-repeat : no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -716,7 +716,7 @@ body {
     right: 87px;
 	width: 30px;
 	height: 19px;
-	background: url(assets/images/calc/battery_for_electrocar.webp) no-repeat;
+	background: url(../images/calc/battery_for_electrocar.webp) no-repeat;
   }
 
   .car_label::after {
@@ -731,19 +731,19 @@ body {
   }
 
   .car_label.moto::after {
-	  background-image: url(assets/images/calc/motorcycle.webp)
+	  background-image: url(../images/calc/motorcycle.webp)
   }
 
   .car_label.easycar::after {
-	  background-image: url(assets/images/calc/easy_car.webp);
+	  background-image: url(../images/calc/easy_car.webp);
   }
 
   .car_label.electrocar::after {
-	  background-image: url(assets/images/calc/electrocar.webp);
+	  background-image: url(../images/calc/electrocar.webp);
   }
   
   .car_label.pickup::after {
-	  background-image: url(assets/images/calc/pickup.webp);
+	  background-image: url(../images/calc/pickup.webp);
   }
 
   .car_label {
@@ -905,20 +905,20 @@ body {
   }
 
   .prices_item.dollar .prices_icon::after {
-	background-image: url(assets/images/calc/prices/dollar-symbol.webp);
+	background-image: url(../images/calc/prices/dollar-symbol.webp);
   }
 
   .prices_item.engine .prices_icon::after {
-	background-image: url(assets/images/calc/prices/motor.webp);
+	background-image: url(../images/calc/prices/motor.webp);
   }
   .prices_item.calendar .prices_icon::after {
-	background-image: url(assets/images/calc/prices/calendar.webp);
+	background-image: url(../images/calc/prices/calendar.webp);
   }
   .prices_item.auction .prices_icon::after {
-	background-image: url(assets/images/calc/prices/auction.webp);
+	background-image: url(../images/calc/prices/auction.webp);
   }
   .prices_item.protect .prices_icon::after {
-	background-image: url(assets/images/calc/prices/auto-insurance.webp);
+	background-image: url(../images/calc/prices/auto-insurance.webp);
   }
 
   .prices_item select {
@@ -966,7 +966,7 @@ body {
 	  height: 15px;
 	  margin-right: 10px;
 
-	  background-image: url(assets/images/calc/prices/information.webp);
+	  background-image: url(../images/calc/prices/information.webp);
 	  background-repeat: no-repeat;
 	  cursor: pointer;
   }
