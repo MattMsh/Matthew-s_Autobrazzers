@@ -478,7 +478,7 @@ body {
 	font-family: "Open Sans";
 	font-size: 30px;
 	font-weight: 700;
-	line-height: 30px;
+	line-height: 40px;
 	text-transform: uppercase;
 	text-align: center;
   }
@@ -1046,7 +1046,10 @@ body {
 	text-decoration: none;
   }
 
-
+  .title-wrapper {
+	  margin: 0 auto;
+	  max-width: 750px;
+  }
 
 
 
