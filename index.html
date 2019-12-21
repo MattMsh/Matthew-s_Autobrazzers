@@ -7,6 +7,8 @@
 	<link href="assets/images/favicon_ab2.ico" rel="shortcut icon" type="image/x-icon" />
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -211,7 +213,7 @@
 							<div class="main_prices">
 								<div class="prices_item dollar">
 									<input type="text" placeholder="Цена авто">
-									<span class="prices_icon"></span class="prices_icon">
+									<span class="prices_icon"></span>
 								</div>
 								<div class="prices_item engine">
 									<input type="text" placeholder="Объем двигателя">
@@ -253,7 +255,7 @@
 							<span class="sum">Общая сумма:</span>
 							<div class="prices_item dollar">
 								<input type="text" value="23546" disabled>
-								<span class="prices_icon"></span class="prices_icon">
+								<span class="prices_icon"></span>
 							</div>
 						</div>
 						<a class="convert_to_pdf" href="#">
@@ -268,13 +270,443 @@
 				<div class="title-wrapper">
 					<h2 class="title">Примеры ценообразования и выгоды авто из  Штатов</h2>
 				</div>
-				
+				<div class="examples__slider">
+					<div>
+						<div class="examples__item">
+							<div class="examples__photo-wrapper">
+								<img src="assets/images/calc/examples/1-st_car.png" alt="infinity" class="examples__photo">
+							</div>
+							<div class="examples__description">
+								<div class="examples__name">
+									<span>Mazda 3</span>
+									<span>2013</span>
+								</div>
+								<div class="price_in_usa">
+									<span class="prices__description">Цена в США</span>
+									<span class="price__dollar">$<span class="price__number">1 500</span></span>
+									
+								</div>
+								<div class="examples__prices">
+									<div class="collection_auction">
+										<span class="prices__description">Сбор аукцион</span>
+										<span class="price__dollar">$<span class="price__number">437</span></span>
+									</div>
+									<div class="delivery">
+										<span class="prices__description">Доставка</span>
+										<span class="price__dollar">$<span class="price__number">1 400</span></span>
+									</div>
+									<div class="customs_clearance">
+										<span class="prices__description">Растаможка</span>
+										<span class="price__dollar">$<span class="price__number">1 718</span></span>
+									</div>
+									<div class="port_of_Odessa">
+										<span class="prices__description">Порт Одесса</span>
+										<span class="price__dollar">$<span class="price__number">950</span></span>	
+									</div>
+									<div class="repair">
+										<span class="prices__description">Ремонт</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>	
+									</div>	
+									<div class="certificate">
+										<span class="prices__description">Сертификат</span>
+										<span class="price__dollar">$<span class="price__number">300</span></span>	
+									</div>
+									<div class="MREO">
+										<span class="prices__description">МРЭО</span>
+										<span class="price__dollar">$<span class="price__number">100</span></span>
+									</div>
+									<div class="services">
+										<span class="prices__description">Услуги</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>
+									</div>	
+								</div>
+								<div class="examples__price__finish">
+									<div class="turnkey_in_Ukraine">
+										<span class="prices__description">Под ключ в Украине</span>
+										<span class="price__dollar">$<span class="price__number">9 005</span></span>
+									</div>
+									<div class="average_price_auto_ria">
+										<span class="prices__description">Средняя цена  auto.ria</span>
+										<span class="price__dollar">$<span class="price__number">11 500</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="examples__item">
+							<div class="examples__photo-wrapper">
+								<img src="assets/images/calc/examples/1-st_car.png" alt="infinity" class="examples__photo">
+							</div>
+							<div class="examples__description">
+								<div class="examples__name">
+									<span>Mazda 3</span>
+									<span>2013</span>
+								</div>
+								<div class="price_in_usa">
+									<span class="prices__description">Цена в США</span>
+									<span class="price__dollar">$<span class="price__number">1 500</span></span>
+									
+								</div>
+								<div class="examples__prices">
+									<div class="collection_auction">
+										<span class="prices__description">Сбор аукцион</span>
+										<span class="price__dollar">$<span class="price__number">437</span></span>
+									</div>
+									<div class="delivery">
+										<span class="prices__description">Доставка</span>
+										<span class="price__dollar">$<span class="price__number">1 400</span></span>
+									</div>
+									<div class="customs_clearance">
+										<span class="prices__description">Растаможка</span>
+										<span class="price__dollar">$<span class="price__number">1 718</span></span>
+									</div>
+									<div class="port_of_Odessa">
+										<span class="prices__description">Порт Одесса</span>
+										<span class="price__dollar">$<span class="price__number">950</span></span>	
+									</div>
+									<div class="repair">
+										<span class="prices__description">Ремонт</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>	
+									</div>	
+									<div class="certificate">
+										<span class="prices__description">Сертификат</span>
+										<span class="price__dollar">$<span class="price__number">300</span></span>	
+									</div>
+									<div class="MREO">
+										<span class="prices__description">МРЭО</span>
+										<span class="price__dollar">$<span class="price__number">100</span></span>
+									</div>
+									<div class="services">
+										<span class="prices__description">Услуги</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>
+									</div>	
+								</div>
+								<div class="examples__price__finish">
+									<div class="turnkey_in_Ukraine">
+										<span class="prices__description">Под ключ в Украине</span>
+										<span class="price__dollar">$<span class="price__number">9 005</span></span>
+									</div>
+									<div class="average_price_auto_ria">
+										<span class="prices__description">Средняя цена  auto.ria</span>
+										<span class="price__dollar">$<span class="price__number">11 500</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div>
+						<div class="examples__item">
+							<div class="examples__photo-wrapper">
+								<img src="assets/images/calc/examples/1-st_car.png" alt="infinity" class="examples__photo">
+							</div>
+							<div class="examples__description">
+								<div class="examples__name">
+									<span>Mazda 3</span>
+									<span>2013</span>
+								</div>
+								<div class="price_in_usa">
+									<span class="prices__description">Цена в США</span>
+									<span class="price__dollar">$<span class="price__number">1 500</span></span>
+									
+								</div>
+								<div class="examples__prices">
+									<div class="collection_auction">
+										<span class="prices__description">Сбор аукцион</span>
+										<span class="price__dollar">$<span class="price__number">437</span></span>
+									</div>
+									<div class="delivery">
+										<span class="prices__description">Доставка</span>
+										<span class="price__dollar">$<span class="price__number">1 400</span></span>
+									</div>
+									<div class="customs_clearance">
+										<span class="prices__description">Растаможка</span>
+										<span class="price__dollar">$<span class="price__number">1 718</span></span>
+									</div>
+									<div class="port_of_Odessa">
+										<span class="prices__description">Порт Одесса</span>
+										<span class="price__dollar">$<span class="price__number">950</span></span>	
+									</div>
+									<div class="repair">
+										<span class="prices__description">Ремонт</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>	
+									</div>	
+									<div class="certificate">
+										<span class="prices__description">Сертификат</span>
+										<span class="price__dollar">$<span class="price__number">300</span></span>	
+									</div>
+									<div class="MREO">
+										<span class="prices__description">МРЭО</span>
+										<span class="price__dollar">$<span class="price__number">100</span></span>
+									</div>
+									<div class="services">
+										<span class="prices__description">Услуги</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>
+									</div>	
+								</div>
+								<div class="examples__price__finish">
+									<div class="turnkey_in_Ukraine">
+										<span class="prices__description">Под ключ в Украине</span>
+										<span class="price__dollar">$<span class="price__number">9 005</span></span>
+									</div>
+									<div class="average_price_auto_ria">
+										<span class="prices__description">Средняя цена  auto.ria</span>
+										<span class="price__dollar">$<span class="price__number">11 500</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="examples__item">
+							<div class="examples__photo-wrapper">
+								<img src="assets/images/calc/examples/1-st_car.png" alt="infinity" class="examples__photo">
+							</div>
+							<div class="examples__description">
+								<div class="examples__name">
+									<span>Mazda 3</span>
+									<span>2013</span>
+								</div>
+								<div class="price_in_usa">
+									<span class="prices__description">Цена в США</span>
+									<span class="price__dollar">$<span class="price__number">1 500</span></span>
+									
+								</div>
+								<div class="examples__prices">
+									<div class="collection_auction">
+										<span class="prices__description">Сбор аукцион</span>
+										<span class="price__dollar">$<span class="price__number">437</span></span>
+									</div>
+									<div class="delivery">
+										<span class="prices__description">Доставка</span>
+										<span class="price__dollar">$<span class="price__number">1 400</span></span>
+									</div>
+									<div class="customs_clearance">
+										<span class="prices__description">Растаможка</span>
+										<span class="price__dollar">$<span class="price__number">1 718</span></span>
+									</div>
+									<div class="port_of_Odessa">
+										<span class="prices__description">Порт Одесса</span>
+										<span class="price__dollar">$<span class="price__number">950</span></span>	
+									</div>
+									<div class="repair">
+										<span class="prices__description">Ремонт</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>	
+									</div>	
+									<div class="certificate">
+										<span class="prices__description">Сертификат</span>
+										<span class="price__dollar">$<span class="price__number">300</span></span>	
+									</div>
+									<div class="MREO">
+										<span class="prices__description">МРЭО</span>
+										<span class="price__dollar">$<span class="price__number">100</span></span>
+									</div>
+									<div class="services">
+										<span class="prices__description">Услуги</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>
+									</div>	
+								</div>
+								<div class="examples__price__finish">
+									<div class="turnkey_in_Ukraine">
+										<span class="prices__description">Под ключ в Украине</span>
+										<span class="price__dollar">$<span class="price__number">9 005</span></span>
+									</div>
+									<div class="average_price_auto_ria">
+										<span class="prices__description">Средняя цена  auto.ria</span>
+										<span class="price__dollar">$<span class="price__number">11 500</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="examples__item">
+							<div class="examples__photo-wrapper">
+								<img src="assets/images/calc/examples/1-st_car.png" alt="infinity" class="examples__photo">
+							</div>
+							<div class="examples__description">
+								<div class="examples__name">
+									<span>Mazda 3</span>
+									<span>2013</span>
+								</div>
+								<div class="price_in_usa">
+									<span class="prices__description">Цена в США</span>
+									<span class="price__dollar">$<span class="price__number">1 500</span></span>
+									
+								</div>
+								<div class="examples__prices">
+									<div class="collection_auction">
+										<span class="prices__description">Сбор аукцион</span>
+										<span class="price__dollar">$<span class="price__number">437</span></span>
+									</div>
+									<div class="delivery">
+										<span class="prices__description">Доставка</span>
+										<span class="price__dollar">$<span class="price__number">1 400</span></span>
+									</div>
+									<div class="customs_clearance">
+										<span class="prices__description">Растаможка</span>
+										<span class="price__dollar">$<span class="price__number">1 718</span></span>
+									</div>
+									<div class="port_of_Odessa">
+										<span class="prices__description">Порт Одесса</span>
+										<span class="price__dollar">$<span class="price__number">950</span></span>	
+									</div>
+									<div class="repair">
+										<span class="prices__description">Ремонт</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>	
+									</div>	
+									<div class="certificate">
+										<span class="prices__description">Сертификат</span>
+										<span class="price__dollar">$<span class="price__number">300</span></span>	
+									</div>
+									<div class="MREO">
+										<span class="prices__description">МРЭО</span>
+										<span class="price__dollar">$<span class="price__number">100</span></span>
+									</div>
+									<div class="services">
+										<span class="prices__description">Услуги</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>
+									</div>	
+								</div>
+								<div class="examples__price__finish">
+									<div class="turnkey_in_Ukraine">
+										<span class="prices__description">Под ключ в Украине</span>
+										<span class="price__dollar">$<span class="price__number">9 005</span></span>
+									</div>
+									<div class="average_price_auto_ria">
+										<span class="prices__description">Средняя цена  auto.ria</span>
+										<span class="price__dollar">$<span class="price__number">11 500</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div>
+						<div class="examples__item">
+							<div class="examples__photo-wrapper">
+								<img src="assets/images/calc/examples/1-st_car.png" alt="infinity" class="examples__photo">
+							</div>
+							<div class="examples__description">
+								<div class="examples__name">
+									<span>Mazda 3</span>
+									<span>2013</span>
+								</div>
+								<div class="price_in_usa">
+									<span class="prices__description">Цена в США</span>
+									<span class="price__dollar">$<span class="price__number">1 500</span></span>
+									
+								</div>
+								<div class="examples__prices">
+									<div class="collection_auction">
+										<span class="prices__description">Сбор аукцион</span>
+										<span class="price__dollar">$<span class="price__number">437</span></span>
+									</div>
+									<div class="delivery">
+										<span class="prices__description">Доставка</span>
+										<span class="price__dollar">$<span class="price__number">1 400</span></span>
+									</div>
+									<div class="customs_clearance">
+										<span class="prices__description">Растаможка</span>
+										<span class="price__dollar">$<span class="price__number">1 718</span></span>
+									</div>
+									<div class="port_of_Odessa">
+										<span class="prices__description">Порт Одесса</span>
+										<span class="price__dollar">$<span class="price__number">950</span></span>	
+									</div>
+									<div class="repair">
+										<span class="prices__description">Ремонт</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>	
+									</div>	
+									<div class="certificate">
+										<span class="prices__description">Сертификат</span>
+										<span class="price__dollar">$<span class="price__number">300</span></span>	
+									</div>
+									<div class="MREO">
+										<span class="prices__description">МРЭО</span>
+										<span class="price__dollar">$<span class="price__number">100</span></span>
+									</div>
+									<div class="services">
+										<span class="prices__description">Услуги</span>
+										<span class="price__dollar">$<span class="price__number">1 000</span></span>
+									</div>	
+								</div>
+								<div class="examples__price__finish">
+									<div class="turnkey_in_Ukraine">
+										<span class="prices__description">Под ключ в Украине</span>
+										<span class="price__dollar">$<span class="price__number">9 005</span></span>
+									</div>
+									<div class="average_price_auto_ria">
+										<span class="prices__description">Средняя цена  auto.ria</span>
+										<span class="price__dollar">$<span class="price__number">11 500</span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</section>
+		<section class="our_work">
+			<div class="container">
+				<h2 class="title">Последовательность нашей работы</h2>
+				<div class="our_work_content">
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/1.webp" alt="" class="our_work_img"></div>
+						<div class="text">Подбор авто</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/2.webp" alt="" class="our_work_img"></div>
+						<div class="text">Проверка в $ базах</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/3.webp" alt="" class="our_work_img"></div>
+						<div class="text">Выкуп с аукциона</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/4.webp" alt="" class="our_work_img"></div>
+						<div class="text">Страховка</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/5.webp" alt="" class="our_work_img"></div>
+						<div class="text">Погрузка</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/6.webp" alt="" class="our_work_img"></div>
+						<div class="text">Отправка</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/7.webp" alt="" class="our_work_img"></div>
+						<div class="text">Растаможка</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/8.webp" alt="" class="our_work_img"></div>
+						<div class="text">Доставка</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/9.webp" alt="" class="our_work_img"></div>
+						<div class="text">Запчасти</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/10.webp" alt="" class="our_work_img"></div>
+						<div class="text">Ремонт</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/11.webp" alt="" class="our_work_img"></div>
+						<div class="text">Сертификация</div>
+					</div>
+					<div class="our_work_item">
+						<div class="our_work_img-wrapper"><img src="assets/images/calc/our_work/12.webp" alt="" class="our_work_img"></div>
+						<div class="text">Ваше авто готово</div>
+					</div> 
+				</div>
+			</div>
+			
 		</section>
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="assets/js/jquery.maskedinput.min.js"></script>
 <script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

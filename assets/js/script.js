@@ -16,3 +16,9 @@ $('.header_menu').on('click', function(e) {
 $(function(){
 	$("input[name=phone]").mask("+38 (099) 999 99 99");
   });
+
+$('.examples__slider').slick({
+infinite: true,
+slidesToShow: 3,
+slidesToScroll: 3
+});
