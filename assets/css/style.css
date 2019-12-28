@@ -1788,7 +1788,8 @@ body {
 
 	.contacts h2.title {
 		position: absolute;
-		top: 0;
+		top: 80px;
+		padding: 0;
 		left: calc(50% - 85px);
 	}
 
@@ -1864,12 +1865,20 @@ body {
 	}
 
 	/* Map */
-	p.content {
+	a.content {
 		text-align: center;
+		text-decoration: none;
+		color: #fff;
+		transition: .3s;
+	}
+
+	a.content:hover {
+		color: #f7c935;
 	}
 	
 	div .gm-style .gm-style-iw-c {
 		overflow: visible;
+		padding: 24px 40px;
 		width: 445px;
 		height: 79px;
 		background-color: #000000;
@@ -2200,6 +2209,9 @@ body {
 	.intro form{
 		padding: 20px 20px 20px 20px;
 		height: unset;
+	}
+	.intro form .btn {
+		margin-bottom: 20px;
 	}
 
 	/* Calculator */
