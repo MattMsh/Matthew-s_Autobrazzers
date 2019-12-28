@@ -9,7 +9,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		#map {
+			position: relative;
+			width: 100%;
+			height: 600px;
+		}
+	</style>
 </head>
 <body>
 	<div class="page-wrapper">
@@ -212,30 +220,30 @@
 						<div class="prices">
 							<div class="main_prices">
 								<div class="prices_item dollar">
-									<input type="text" placeholder="Цена авто">
-									<span class="prices_icon"></span>
+									<input type="text" placeholder="Цена авто" id="price_auto">
+									<label for="price_auto"><span class="prices_icon"></span></label>
 								</div>
 								<div class="prices_item engine">
-									<input type="text" placeholder="Объем двигателя">
-									<span class="prices_icon"></span>
+									<input type="text" placeholder="Объем двигателя" id="engine_capacity">
+									<label for="engine_capacity"><span class="prices_icon"></span></label>
 								</div>
 								<div class="prices_item calendar">
-									<input type="text" placeholder="Год выпуска">
-									<span class="prices_icon"></span>
+									<input type="text" placeholder="Год выпуска" id="year_of_issue">
+									<label for="year_of_issue"><span class="prices_icon"></span></label>
 								</div>
 								<div class="prices_item auction">
 									<select name="auction" id="auction">
 										<option value="auction">Аукцион</option>
 										<option value="other">Другое</option>
 									</select>
-									<span class="prices_icon"></span>
+									<label for="auction"><span class="prices_icon"></span></label>
 								</div>
 								<div class="prices_item protect">
 									<select name="protection" id="select_protection">
 										<option value="Yes">Да</option>
 										<option value="No">Нет</option>
 									</select>
-									<span class="prices_icon"></span>
+									<label for="select_protection"><span class="prices_icon"></span></label>
 								</div>
 							</div>
 							<div class="other_prices">
@@ -702,11 +710,598 @@
 			</div>
 			
 		</section>
-	</div>
+
+		<section class="services">
+			<div class="container">
+				<h2 class="title">Тарифная сетка на услуги</h2>
+				<div class="all_tarifs-wrapper">
+					<div class="tarif-wrapper">
+						<div class="tarif_name">Максимальный</div>
+						<div class="tarif">
+							<div class="tarif_description">
+								<div class="tarif_price"><sup>$ </sup>1 000</div>
+								<div class="open-btn max"></div>
+								<div class="tarif_text max">
+									<div class="tarif_text_top">Заказывая данный пакет услуг вы получаете такие возможности:</div>
+									<ul class="tarif-list">
+										<li class="tarif-list-item">Анализ внутреннего авторынка Украины и США.</li>
+										<li class="tarif-list-item">Индивидуальный подбор авто на аукционах США.</li>
+										<li class="tarif-list-item">Предварительную смету цены авто на номерах в Украине, детально прописанную по пунктах.</li>
+										<li class="tarif-list-item">Возможность следить за торгами на аукционах.</li>
+										<li class="tarif-list-item">Максимальная скидка на аукционный сбор.</li>
+										<li class="tarif-list-item">Опытные логистические компании и качественные услуги упаковки авто в контейнер.</li>
+										<li class="tarif-list-item">Доступ в личный кабинет покупателя с помощью, которого вам будет понятно и легко с нами взаимодействовать.</li>
+										<li class="tarif-list-item">Прозрачная система оплаты.</li>
+										<li class="tarif-list-item">Подбор автозапчастей.</li>
+										<li class="tarif-list-item">Услуги по ремонту авто.</li>
+										<li class="tarif-list-item">Прохождение сертификации.</li>		
+									</ul>
+								</div>
+								<div class="order-btn-wrapper">
+									<div class="order-btn">
+										<a href="#" class="btn">Заказать</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tarif-wrapper">
+						<div class="tarif_name">Двойной</div>
+						<div class="tarif">
+							<div class="tarif_description">
+								<div class="tarif_price"><sup>$ </sup>500</div>
+								<div class="open-btn double"></div>
+								<div class="tarif_text double">
+									<div class="tarif_text_top">Заказав сразу несколько автомобилей вы получаете скидку 50% на пакет Максимальный.</div>
+								</div>
+								<div class="order-btn-wrapper double">
+									<div class="order-btn">
+										<a href="#" class="btn">Заказать</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tarif-wrapper">
+						<div class="tarif_name">Партнерский</div>
+						<div class="tarif">
+							<div class="tarif_description partner">
+								<div class="tarif_price">Цена индивидуально</div>
+								<div class="open-btn"></div>
+								<div class="tarif_text">
+									<div class="tarif_text_top">Заказывая данный пакет услуг вы получаете такие возможности:</div>
+									<ul class="tarif-list">
+										<li class="tarif-list-item">Анализ внутреннего авторынка Украины и США.</li>
+										<li class="tarif-list-item">Индивидуальный подбор авто на аукционах США.</li>
+										<li class="tarif-list-item">Предварительную смету цены авто на номерах в Украине, детально прописанную по пунктах.</li>
+										<li class="tarif-list-item">Возможность следить за торгами на аукционах.</li>
+										<li class="tarif-list-item">Максимальная скидка на аукционный сбор.</li>
+										<li class="tarif-list-item">Опытные логистические компании и качественные услуги упаковки авто в контейнер.</li>
+										<li class="tarif-list-item">Доступ в личный кабинет покупателя с помощью, которого вам будет понятно и легко с нами взаимодействовать.</li>
+										<li class="tarif-list-item">Прозрачная система оплаты.</li>
+										<li class="tarif-list-item">Подбор автозапчастей.</li>
+										<li class="tarif-list-item">Услуги по ремонту авто.</li>
+										<li class="tarif-list-item">Прохождение сертификации.</li>		
+									</ul>
+								</div>
+								<div class="order-btn-wrapper">
+									<div class="order-btn">
+										<a href="#" class="btn">Заказать</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>			
+				</div>
+			</div>
+		</section>
+		<section id="selection_car">
+			<div class="container">
+				<h2 class="title">Подбор авто из США</h2>
+				<div class="cars_wrapper">
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="motorcycle_select">
+						<label for="motorcycle_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/moto.webp" alt="moto"></div>
+							<div class="car_name">
+								Мото
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="snowflake_select">
+						<label for="snowflake_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/snowflake.webp" alt="snowflake"></div>
+							<div class="car_name">
+								Седан
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="coupe_select">
+						<label for="coupe_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/coupe.webp" alt="coupe"></div>
+							<div class="car_name">
+								Купе
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="electrocar_select">
+						<label for="electrocar_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/electrocar.webp" alt="electrocar"></div>
+							<div class="car_name">
+								Электрокар
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="suv_select">
+						<label for="suv_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/SUV.webp" alt="SUV"></div>
+							<div class="car_name">
+								Внедорожник
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="pickup_select">
+						<label for="pickup_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/pickup.webp" alt="pickup"></div>
+							<div class="car_name">
+								Пикап
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="minivan_select">
+						<label for="minivan_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/minivan.webp" alt="minivan"></div>
+							<div class="car_name">
+								Минивэн
+							</div>
+						</label>
+					</div>
+					<div class="car_item">
+						<input type="radio" name="typeofcar" id="bus_select">
+						<label for="bus_select">
+							<div class="car_img-wrap"><img src="/assets/images/select/bus.webp" alt="bus"></div>
+							<div class="car_name">
+								Бус
+							</div>
+						</label>
+					</div>	
+				</div>
+				<form class="calculator_select">
+					<input type="tel" name="phone" id="calculator_select_phone" class="number_input" placeholder="+38 (___) ___-__-__">
+					<select class="price_select" name="selected_price">
+						<option value="8000-10000">8000$-10000$</option>
+						<option value="10000-25000">10000$-25000$</option>
+						<option value="25000-34000">25000$-34000$</option>
+					</select>
+					<div class="year_select-container">
+						<input type="text" class="polzunok-input-left">
+						<input type="text" class="polzunok-input-right">
+						<div class="year_select"></div>
+					</div>
+					<div class="order-btn">
+						<a href="#" class="btn">заказать</a>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="reviews">
+			<div class="container">
+				<h2 class="title">Отзывы</h2>
+				<div class="reviews_slider">
+					<div>
+						<div class="card">
+							<div class="card_photo"></div>
+							<div class="card_author">Ричард Ройтман</div>
+							<div class="card_text">Excepteur sint occaecat cupidatat non proident, sunt insides culpa qui officia deserunt mollit anim id eston laborum. Sed ut perspiciatis unde omnis iste natus error sitire voluptatem accusant doloremque laudantium, totamie rem aperiam, eaque ipsa quae. </div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<div class="card_photo"></div>
+							<div class="card_author">Ричард Ройтман</div>
+							<div class="card_text">Excepteur sint occaecat cupidatat non proident, sunt insides culpa qui officia deserunt mollit anim id eston laborum. Sed ut perspiciatis unde omnis iste natus error sitire voluptatem accusant doloremque laudantium, totamie rem aperiam, eaque ipsa quae. </div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<div class="card_photo"></div>
+							<div class="card_author">Ричард Ройтман</div>
+							<div class="card_text">Excepteur sint occaecat cupidatat non proident, sunt insides culpa qui officia deserunt mollit anim id eston laborum. Sed ut perspiciatis unde omnis iste natus error sitire voluptatem accusant doloremque laudantium, totamie rem aperiam, eaque ipsa quae. </div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<div class="card_photo"></div>
+							<div class="card_author">Ричард Ройтман</div>
+							<div class="card_text">Excepteur sint occaecat cupidatat non proident, sunt insides culpa qui officia deserunt mollit anim id eston laborum. Sed ut perspiciatis unde omnis iste natus error sitire voluptatem accusant doloremque laudantium, totamie rem aperiam, eaque ipsa quae. </div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<div class="card_photo"></div>
+							<div class="card_author">Ричард Ройтман</div>
+							<div class="card_text">Excepteur sint occaecat cupidatat non proident, sunt insides culpa qui officia deserunt mollit anim id eston laborum. Sed ut perspiciatis unde omnis iste natus error sitire voluptatem accusant doloremque laudantium, totamie rem aperiam, eaque ipsa quae. </div>
+						</div>
+					</div>
+					<div>
+						<div class="card">
+							<div class="card_photo"></div>
+							<div class="card_author">Ричард Ройтман</div>
+							<div class="card_text">Excepteur sint occaecat cupidatat non proident, sunt insides culpa qui officia deserunt mollit anim id eston laborum. Sed ut perspiciatis unde omnis iste natus error sitire voluptatem accusant doloremque laudantium, totamie rem aperiam, eaque ipsa quae. </div>
+						</div>
+					</div>	
+				</div>	
+			</div>
+		</section>
+
+		
+		<section class="contacts">
+			<div id="map"></div>
+			<h2 class="title">Контакты</h2>
+			<div class="container inf">
+				<div class="container-info">
+					<div class="title_contacts">
+						<div class="text">Наши контакты</div>
+					</div>
+					<div class="header_phone">
+						<a href="tel:+38(097)0770975" class="header_phone_icon_link">
+							<i class="header_phone_icon"></i>
+						</a>
+						<a href="tel:+38(097)0770975" class="phone_number">+38 (097) 077 09 75</a>
+					</div>
+					<div class="location">
+						<div class="location_img"><img src="assets/images/contacts/map-selector.webp" alt="map_selector"></div>
+						<a href="https://goo.gl/maps/mQkWFVA9wAM55qjU7" class="location_adress">м. Київ, вул. Сверстюка 19,
+							10 поверх, офіс 13</a>
+					</div> 
+					<div class="social i">
+						<a href="#" class="social_facebook"></a>
+						<a href="#" class="social_instagram"></a>
+						<a href="#" class="social_youtube"></a>
+						<a href="#" class="social_telegram"></a>
+					</div>
+				</div>
+			</div>
+			<div class="container f">
+				<form class="form_intro">
+					<div class="form_content">
+						<div class="form_title">Закажите  обратный  звонок</div>
+						<div class="text_form">Начните работу с нами и уже через 30-40 дней
+							получите ваше авто из США
+						</div>
+						<div class="form_input">
+							<input type="tel" name="phone" class="btn" placeholder="+38 (0__) ___ __ __">
+							<input type="submit" class="btn_submit" value="ЗАКАЗАТЬ">
+						</div>
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer class="footer">
+
+		</footer>
+	</div>  <!-- Page wrapper -->
+
+<script>
+	var map,
+		marker,
+		coordinates = {lat: 50.448309, lng: 30.602896},
+		popupContent = '<p class="content">м. Київ, вул. Сверстюка 19, 10 поверх, офіс 13</p>',
+		infowindow,
+		image = 'assets/images/marker.png';
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: {lat: 50.448166, lng: 30.605499},
+		  zoom: 16,
+		  disableDefaultUI: true,
+		  scrollwheel: false,
+		  styles: [
+					{
+						"featureType": "all",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"saturation": 36
+							},
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 40
+							}
+						]
+					},
+					{
+						"featureType": "all",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "on"
+							},
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 16
+							}
+						]
+					},
+					{
+						"featureType": "all",
+						"elementType": "labels.icon",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"lightness": 20
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 17
+							},
+							{
+								"weight": 1.2
+							}
+						]
+					},
+					{
+						"featureType": "administrative.province",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#e3b141"
+							}
+						]
+					},
+					{
+						"featureType": "administrative.locality",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#e0a64b"
+							}
+						]
+					},
+					{
+						"featureType": "administrative.locality",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"color": "#0e0d0a"
+							}
+						]
+					},
+					{
+						"featureType": "administrative.neighborhood",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#d1b995"
+							}
+						]
+					},
+					{
+						"featureType": "landscape",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 20
+							}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 21
+							}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"color": "#12120f"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"lightness": "-77"
+							},
+							{
+								"gamma": "4.48"
+							},
+							{
+								"saturation": "24"
+							},
+							{
+								"weight": "0.65"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{
+								"lightness": 29
+							},
+							{
+								"weight": 0.2
+							}
+						]
+					},
+					{
+						"featureType": "road.highway.controlled_access",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#f6b044"
+							}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#4f4e49"
+							},
+							{
+								"weight": "0.36"
+							}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#c4ac87"
+							}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"color": "#262307"
+							}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#a4875a"
+							},
+							{
+								"lightness": 16
+							},
+							{
+								"weight": "0.16"
+							}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#deb483"
+							}
+						]
+					},
+					{
+						"featureType": "transit",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 19
+							}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#0f252e"
+							},
+							{
+								"lightness": 17
+							}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#080808"
+							},
+							{
+								"gamma": "3.14"
+							},
+							{
+								"weight": "1.07"
+							}
+						]
+					}
+				]
+		});
+		marker = new google.maps.Marker({
+            position: coordinates,
+			map: map,
+			animation: google.maps.Animation.DROP,
+			icon: image
+			});
+		infowindow = new google.maps.InfoWindow({
+            content: popupContent
+		});
+		infowindow.open(map, marker);
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUL2KefTWgiBwwZrB_azo5TgEElAD35kM&callback=initMap"
+async defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="assets/js/jquery.maskedinput.min.js"></script>
 <script src="assets/js/jquery.validate.min.js"></script>
 <script src="assets/js/slick.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".year_select" ).slider({
+      range: true,
+      min: 2000,
+      max: 2019,
+      values: [ 2005, 2012 ],
+      slide: function( event, ui ) {
+        $( "#number" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#number" ).val( "$" + $( ".year_select" ).slider( "values", 0 ) +
+      " - $" + $( ".year_select" ).slider( "values", 1 ) );
+  } );
+  </script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
