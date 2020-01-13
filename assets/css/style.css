@@ -976,7 +976,7 @@ body {
 		-moz-appearance: none;
 		appearance: none;
 		line-height: 1.4;
-		background-image: url(/assets/images/calc/prices/arrow.webp);
+		background-image: url(../images/calc/prices/arrow.webp);
 		background-position: 90% 50%;
 		background-repeat: no-repeat;
   }
