@@ -397,7 +397,7 @@ body {
 	font-weight: 400;
 	text-transform: uppercase;
 	-webkit-transition: 0.1s;
-	transition: 0.1s;
+	transition: 0.3s;
   }
   .login_btn span {
 	margin-right: 16px;
@@ -558,6 +558,7 @@ body {
 	padding: 0;
 	margin-bottom: 40px;
 	background-repeat: no-repeat;
+	fill: #f7c935;
   }
   .social a:hover {
 	-webkit-filter: brightness(5);
@@ -566,22 +567,22 @@ body {
   .social_facebook {
 	width: 25px;
 	height: 26px;
-	background-image: url(../images/social/facebook.webp);
+	
   }
   .social_instagram {
 	width: 25px;
 	height: 25px;
-	background-image: url(../images/social/instagram.webp);
+	
   }
   .social_youtube {
 	width: 27px;
 	height: 20px;
-	background-image: url(../images/social/youtube.webp);
+	
   }
   .social_telegram {
 	width: 24px;
 	height: 21px;
-	background-image: url(../images/social/telegram.webp);
+	
   }
   .intro form {
 	position: relative;
@@ -639,16 +640,16 @@ body {
 	color: #000000;
   }
  form .btn::-webkit-input-placeholder {
-	color: #575656;
+	color: #000000;
   }
  form .btn:-moz-placeholder {
-	color: #575656;
+	color: #000000;
   }
  form .btn::-moz-placeholder {
-	color: #575656;
+	color: #000000;
   }
  form .btn:-ms-input-placeholder {
-	color: #575656;
+	color: #000000;
   }
 	
 	.form_input {
@@ -867,7 +868,15 @@ body {
 	border-radius: 20px;
 	border: 2px solid #d8d8d8;
 	background-color: #ffffff;
-  }
+	}
+	
+	.prices_item.active {
+		border-color: #f7c935;
+	}
+
+	.prices_item.active .prices_icon {
+		background-color: #f7c935;
+	}
 
   .prices_item input {
 	width: calc(100% - 70px);
@@ -889,6 +898,8 @@ body {
   .prices_item .prices_icon {
 	position: absolute;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	right: -2px;
 	top: -2px;
 	width: 70px;
@@ -898,9 +909,7 @@ body {
   }
 
   .prices_item .prices_icon::after {
-	position: absolute;
-	top: 0;
-	left: 0;
+	
 	width: 70px;
 	height: 40px;
 	content: "";
@@ -908,23 +917,47 @@ body {
 	
 	background-repeat: no-repeat;
 	background-position: center;
-  }
-
+	}
+	.prices_item.dollar .prices_icon::after,
+	.prices_item.engine .prices_icon::after,
+	.prices_item.calendar .prices_icon::after,
+	.prices_item.auction .prices_icon::after,
+	.prices_item.protect .prices_icon::after {
+		opacity: .5;
+	}
+	
   .prices_item.dollar .prices_icon::after {
-	background-image: url(../images/calc/prices/dollar-symbol.webp);
+		background-image: url(../images/calc/prices/dollar.svg);
+		width: 10px;
+		height: 17px;
   }
 
   .prices_item.engine .prices_icon::after {
-	background-image: url(../images/calc/prices/motor.webp);
+		background-image: url(../images/calc/prices/motor.svg);
+		width: 23px;
+		height: 16px;
+
   }
   .prices_item.calendar .prices_icon::after {
-	background-image: url(../images/calc/prices/calendar.webp);
+		background-image: url(../images/calc/prices/calendar.svg);
+		width: 17px;
   }
   .prices_item.auction .prices_icon::after {
-	background-image: url(../images/calc/prices/auction.webp);
+		background-image: url(../images/calc/prices/auction.svg);
+		width: 20px;
   }
   .prices_item.protect .prices_icon::after {
-	background-image: url(../images/calc/prices/auto-insurance.webp);
+		background-image: url(../images/calc/prices/auto-insurance.svg);
+		width: 22px;
+		height: 18px;
+	}
+	
+	.prices_item.dollar.active .prices_icon::after,
+	.prices_item.engine.active .prices_icon::after,
+	.prices_item.calendar.active .prices_icon::after,
+	.prices_item.auction.active .prices_icon::after,
+	.prices_item.protect.active .prices_icon::after{
+  	opacity: 1;
   }
 
   .prices_item select {
@@ -934,12 +967,18 @@ body {
   }
 
   .prices_item select{
-	opacity: .7;
-	color: #010101;
-	font-family: "Open Sans";
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 30px;
+		opacity: .7;
+		color: #010101;
+		font-family: "Open Sans";
+		font-size: 14px;
+		font-weight: 400;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		line-height: 1.4;
+		background-image: url(/assets/images/calc/prices/arrow.webp);
+		background-position: 90% 50%;
+		background-repeat: no-repeat;
   }
   
   .other_prices {
@@ -983,11 +1022,26 @@ body {
 	  width: 100%;
 	  max-width: 36px;
 	  color: #000000;
-	font-family: "Open Sans";
-	font-size: 16px;
-	font-weight: 700;
-	z-index: 5;
+		font-family: "Open Sans";
+		font-size: 16px;
+		font-weight: 700;
+		z-index: 5;
+		text-align: center;
   }
+
+	.other_prices .prices_item::before {
+		content: "$";
+		position: absolute;
+		display: block;
+		top: 13px;
+    right: 47px;
+		color: #000000;
+		font-family: "Open Sans";
+		font-weight: 700;
+		line-height: 1;
+		font-size: 12px;
+		z-index: 1;
+	}
 
   .other_prices .prices_item::after {
 	content: "";
@@ -1021,8 +1075,12 @@ body {
   }
 
   .finish_price .prices_item .prices_icon {
-	  background-color : #f7c935;
+		background-color : #f7c935;
   }
+	
+	.finish_price .prices_item .prices_icon::after {
+		opacity: 1;
+	}
 
   .sum {
 	color: #000000;
@@ -1057,7 +1115,14 @@ body {
 
   .convert_to_pdf:hover {
 	  box-shadow: 3px 3px 5px rgba(1, 1, 1, .4);
-  }
+	}
+	
+	.pdf_svg {
+		display: inline-block;
+		width: 19px;
+		height: 20px;
+		background: url(/assets/images/calc/prices/pdf.svg)
+	}
 
   .title-wrapper {
 	  margin: 0 auto;
@@ -1284,12 +1349,9 @@ body {
   /* Services */
 
   section.services {
-		min-height: 1220px;
 
 		background-image: url(../images/backgrounds/services/automobile-automotive-car-360399.webp);
 		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
 		padding-bottom: 20px;
   }
 
@@ -1403,7 +1465,8 @@ body {
 
   .order-btn .btn {
 	display: block;
-
+	padding: 0;
+	height: unset;
 	color: #000000;
 	font-family: "Open Sans";
 	font-size: 16px;
@@ -1652,12 +1715,26 @@ body {
 		background: #000;
 		z-index: 2;
 		box-shadow: none;
-		transition: .1s;
+	}
+	.ui-widget-header {
+		background: #f7c935;
 	}
 
-	.year_select-container .ui-slider .ui-slider-handle:hover,
-	.year_select-container .ui-slider .ui-slider-handle:focus {
-		transform: scale(1.2);
+	span.ui-corner-all.ui-slider-handle.ui-state-default::after {
+    content: "2000";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    right: -15px;
+    color: #f7c935;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+	}
+
+	.ui-slider-horizontal .ui-slider-handle{
+		margin-left: -.7em;
 	}
 
 	.polzunok-input-left,
@@ -1684,7 +1761,7 @@ body {
 		background-image: url(../images/backgrounds/reviews/1.webp);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: 50% 50%;
+		background-position: bottom;
 
 	}
 
@@ -1745,6 +1822,41 @@ body {
 		bottom: -72px;
 	}
 
+  .slick-arrow {
+	  width: 43px;
+	  height: 30px;
+	  cursor: pointer;
+	  background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2243%22%20height%3D%2230%22%20viewBox%3D%220%200%2043%2030%22%3E%3Cg%3E%3Cg%3E%3Cimage%20width%3D%2243%22%20height%3D%2230%22%20xlink%3Ahref%3D%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAACsAAAAeCAYAAAC16ufeAAABsUlEQVRYR9XYyUoDQRDG8X%2BD%2B0N48OA7KCKaBBdURPSkR30rPYu4IoI%2BiLjjvutDfFKhIsMQjaPQaec66ekfRaequgKRHkkDwAbwBMyGEG6Kbh2KLvjt7yWtAIu%2B%2FhYYDiFcF%2FleTGwZ2AfaHHgHDBUBR8MaUNIMsJYDW4SvfhLhqFgHTwPrGfC9H4nLRuDoWAdPAZsZ8ANQCiFcfAduCtbBE8B2Bvzo4POvwE3DOngc2AHaHWhpzSJ8Vg%2FcVKyDxxzc4cBnB5%2FmwU3HOnjUwZ0OfHHwSRacBNbBIw7ucuCrg49r4GSwDq4Au0AN%2FObgI3ufFNbBJWAvA34HyiGEwyCpF5gHage8UW6O8b4PGMxsZOCKYa2p6I4h%2BOMeF4a1Mtfzxw%2FFWF7F2jFYyCTmGBs32qPeMSj9hz%2FYZ0ZICispn2sNai1kNdcmg5WUr2JpFgVJ%2Bf4gzXIrKd95pdnISJoEtjI9bZotoqT89SbN5rvOxTHNa42kWWA1%2BQujpDmHtnoJs9lBeldxSdarHgAtDi08lYlWFCQtA0sOtTmXRbTQvCsmtt8Hc5ZHbTBnkS30fAA0S7AhB93eeAAAAABJRU5ErkJggg%3D%3D%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E) no-repeat;
+	}
+
+	.slick-next {
+		right: -65px;
+	}
+
+	.slick-prev {
+		transform: rotate(180deg);
+		left: -65px;
+	}
+	.examples .slick-prev {
+		transform: rotate(180deg) translateY(12px);
+	}
+
+	.slick-arrow:hover {
+		opacity: .2;
+	}
+
+	.slick-arrow::before,
+	.slick-arrow::after {
+		content: "";
+	}
+
+	.examples__slider	.slick-arrow {
+			top: 63%;
+		}
+
+
+
+
 	/* Contacts */
 	.contacts {
 		position: relative;
@@ -1769,7 +1881,7 @@ body {
 		align-items: center;
 		position: absolute;
 		top: -150px;
-		left: 0;
+		left: 15px;
 		width: 1110px;
 		height: 300px;
 		padding: 37.5px 95px 37.5px 80px;
@@ -1796,7 +1908,7 @@ body {
 	.container-info {
 		position: absolute;
 		bottom: 240px;
-		right: 0;
+		right: 15px;
 		width: 350px;
 		height: 293px;
 		padding: 40px 70px 40px 30px;
@@ -1913,11 +2025,77 @@ body {
 	/* Footer */
 
 	.footer{
-		position: relative;
 		width: 100%;
+		height: 135px;
+		background: #1c1c1c;
+		display: flex;
+		align-items: center;
 	}
 
+	.social.footer-social a{
+		background-size: contain;
+	}
+
+	.social.footer-social .social_facebook {
+		width: 20px;
+		height: 20px;
+	}
+
+	.social.footer-social .social_instagram {
+		width: 22px;
+		height: 21px;
+	}
+
+	.social.footer-social .social_youtube {
+		width: 24px;
+		height: 18px;
+	}
+
+	.social.footer-social .social_telegram {
+		width: 20px;
+		height: 18px;
+	}
 	
+	.i.f a{
+		filter:grayscale(0);
+	}
+
+	.header_menu.footer-menu {
+		width: unset;
+	}
+
+	.on_main {
+		color: #fff;
+		position: relative;
+		font-family: "Open Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+		text-transform: uppercase;
+		cursor: pointer;
+		-webkit-transition: color 0.1s linear;
+		transition: color 0.1s linear;
+		text-decoration: none;
+		}
+		.on_main::after {
+		display: block;
+		position: absolute;
+		content: "";
+		top: 30px;
+		right: 0;
+		width: 100%;
+		height: 2px;
+		opacity: 0;
+		background-color: #f7c935;
+		-webkit-transition: opacity 0.1s linear;
+		transition: opacity 0.1s linear;
+		}
+		.on_main:hover {
+		color: #f7c935;
+		}
+		.on_main:hover::after {
+		opacity: 1;
+		}
 
 	
 
@@ -1987,6 +2165,7 @@ body {
 	.examples__price__finish div {
 		max-width: none;
 	}
+	
 
 	/* Our work */
 	.our_work_item {
@@ -2002,6 +2181,12 @@ body {
 	 .our_work_item:nth-child(4),
 	.our_work_item:nth-child(7), .our_work_item:nth-child(10){
 		border-left: none;
+	}
+}
+
+@media only screen and (min-width: 1011px) {
+	.menu {
+		margin-top: 13px;
 	}
 }
 
