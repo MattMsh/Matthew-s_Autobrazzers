@@ -1121,7 +1121,7 @@ body {
 		display: inline-block;
 		width: 19px;
 		height: 20px;
-		background: url(/assets/images/calc/prices/pdf.svg)
+		background: url(../images/calc/prices/pdf.svg)
 	}
 
   .title-wrapper {
