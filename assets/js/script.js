@@ -51,6 +51,16 @@ $(".car_select-wrapper").on("click", function(e) {
   $(this).toggleClass("active");
 });
 
+$(window).resize(function() {
+  if ( $(window).width() < 500 ) {
+    $("a[href*='#']").on("click", function(e) {
+      e.preventDefault;
+      $(".menu").removeClass("active");
+      $(".menu_btn").removeClass("active");
+    });
+  }
+});
+
 $( function() {
   $( "#year-slider" ).slider({
     range: true,
