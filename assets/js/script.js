@@ -11,9 +11,9 @@ $(".header_menu").on("click", function(e) {
   $(".menu_text").toggleClass("active");
 });
 
-$(".prices_item").on("click", function(e) {
+$(".main_prices .prices_item").on("click", function(e) {
   e.preventDefault;
-  $(".prices_item").removeClass("active");
+  $(".main_prices .prices_item").removeClass("active");
   $(this).toggleClass("active");
 });
 
@@ -58,12 +58,18 @@ $( function() {
     max: 2020,
     values: [ 2005, 2016 ],
     slide: function( event, ui ) {
-      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-    }
+      ui.handle.innerHTML = '<span data-value="' + ui.value + '"  class="slider-range-value">' + ui.value + '</span>'
+    },
+    create: function(event, ui) {
+      var ui_sl_handles = $(this).find('.ui-slider-handle');
+      ui_sl_handles[0].innerHTML = '<span class="slider-range-value min-val">2005</span>';
+      ui_sl_handles[1].innerHTML = '<span class="slider-range-value max-val">2016</span>';    
+  }
   });
   $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 } );
+
 
 $(".examples__slider").slick({
   dots: true,
@@ -116,3 +122,6 @@ $(".reviews_slider").slick({
     // instead of a settings object
   ]
 });
+
+
+

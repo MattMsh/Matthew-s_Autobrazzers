@@ -96,9 +96,9 @@
 							</svg>
 						</a>
 						<div class="header_menu">
-							<a href="#" class="menu_btn">
+							<div class="menu_btn">
 								<span></span>
-							</a>
+							</div>
 							<span class="menu_text">Меню</span>
 						</div>
 					</div>
@@ -134,13 +134,13 @@
 			<div class="line"></div>
 			<div class="container">
 				<ul class="menu">
-					<li class="menu__item"><a href="#">Калькулятор Растаможки</a></li>
-					<li class="menu__item"><a href="#">Примеры ценообразования</a></li>
-					<li class="menu__item"><a href="#">Последовательность</a></li>
-					<li class="menu__item"><a href="#">услуги</a></li>
-					<li class="menu__item"><a href="#">Подбор авто</a></li>
-					<li class="menu__item"><a href="#">Отзывы</a></li>
-					<li class="menu__item"><a href="#">Контакты</a></li>
+					<li class="menu__item"><a href="#calc">Калькулятор Растаможки</a></li>
+					<li class="menu__item"><a href="#examples">Примеры ценообразования</a></li>
+					<li class="menu__item"><a href="#work">Последовательность</a></li>
+					<li class="menu__item"><a href="#services">Услуги</a></li>
+					<li class="menu__item"><a href="#selection_car">Подбор авто</a></li>
+					<li class="menu__item"><a href="#reviews">Отзывы</a></li>
+					<li class="menu__item"><a href="#contacts">Контакты</a></li>
 					<li class="menu_news">
 						<a href="#" class="header_news">Новости</a>
 						<div class="rect"></div>
@@ -245,7 +245,7 @@
 				</form>
 			</div>
 		</section>
-		<section class="calc">
+		<section class="calc" id="calc">
 			<div class="container">
 				<h2 class="title">
 					Калькулятор растаможки авто из США
@@ -343,7 +343,7 @@
 				</form>
 			</div>
 		</section>
-		<section class="examples">
+		<section class="examples" id="examples">
 			<div class="container">
 				<div class="title-wrapper">
 					<h2 class="title">Примеры ценообразования и выгоды авто из Штатов</h2>
@@ -730,7 +730,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="our_work">
+		<section class="our_work" id="work">
 			<div class="container">
 				<h2 class="title">Последовательность нашей работы</h2>
 				<div class="our_work_content">
@@ -799,7 +799,7 @@
 
 		</section>
 
-		<section class="services">
+		<section class="services" id="services">
 			<div class="container">
 				<h2 class="title">Тарифная сетка на услуги</h2>
 				<div class="all_tarifs-wrapper">
@@ -965,8 +965,11 @@
 						<option value="25000-34000">25000$-34000$</option>
 					</select>
 					<div class="year_select-container">
+						<div class="year_text">
+							<span class="year_white">Год:</span>
+							<span class="year_text_nums">(2000 - 2019)</span>
+						</div>
 						<div id="year-slider">
-							
 						</div>
 					</div>
 					<div class="order-btn">
@@ -975,7 +978,7 @@
 				</form>
 			</div>
 		</section>
-		<section class="reviews">
+		<section class="reviews" id="reviews">
 			<div class="container">
 				<h2 class="title">Отзывы</h2>
 				<div class="reviews_slider">
@@ -1044,7 +1047,7 @@
 		</section>
 
 
-		<section class="contacts">
+		<section class="contacts" id="contacts">
 			<div id="map"></div>
 			<h2 class="title">Контакты</h2>
 			<div class="container inf">
@@ -1203,9 +1206,9 @@
 						</div>
 					</div>
 					<div class="rect"></div>
-					<a href="#" class="header_news">Новости</a>
+					<div class="footer_news">Новости</div>
 					<div class="rect"></div>
-					<div class="header_phone">
+					<div class="footer_phone">
 						<a href="tel:+38(097)0770975" class="header_phone_icon_link">
 							<i class="header_phone_icon"></i>
 						</a>
@@ -1215,9 +1218,9 @@
 
 						<div class="case_of_lang">
 							<div class="flag"></div>
-							<a href="#" class="lang__text">рус</a>
+							<a class="lang__text">рус</a>
 							<ul class="lang-switch">
-								<li><a href="#" class="lang__text__element">укр</a></li>
+								<li><a class="lang__text__element">укр</a></li>
 								<li></li>
 							</ul>
 						</div>
@@ -1276,6 +1279,7 @@
 		</footer>
 	</div> <!-- Page wrapper -->
 
+	<!-- Map -->
 	<script>
 
 		var map,
@@ -1569,7 +1573,7 @@
 			infowindow.open(map, marker);
 		}
 	</script>
-	
+	<!-- Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUL2KefTWgiBwwZrB_azo5TgEElAD35kM&callback=initMap"
 		async defer></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -1578,20 +1582,17 @@
 	<script src="assets/js/slick.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
-		$(function () {
-			$(".year_select").slider({
-				range: true,
-				min: 2000,
-				max: 2019,
-				values: [2005, 2012],
-				slide: function (event, ui) {
-					$("#number").val("$" + ui.values[0] + " - $" + ui.values[1]);
-				}
-			});
-			$("#number").val("$" + $(".year_select").slider("values", 0) +
-				" - $" + $(".year_select").slider("values", 1));
+		$(document).ready(function(){
+		$("a[href*='#']").on("click", function(e){
+		var anchor = $(this);
+		$('html, body').stop().animate({
+		scrollTop: $(anchor.attr('href')).offset().top
+		}, 777);
+		e.preventDefault();
+		return false;
 		});
-	</script>
+		});
+		</script>
 	<script src="assets/js/script.js"></script>
 </body>
 

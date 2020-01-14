@@ -105,6 +105,7 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0.4);
 	border-radius: 50%;
 	z-index: 1;
+	cursor: pointer;
   }
   .menu_btn span {
 	position: absolute;
@@ -310,16 +311,17 @@ body {
 	top: 7px;
   }
   .lang__text {
-	display: block;
-	position: relative;
-	font-family: "Raleway", sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	text-decoration: none;
-	color: #f7c935;
-	text-transform: uppercase;
-	-webkit-transition: 0.1s linear opacity;
-	transition: 0.1s linear opacity;
+		display: block;
+		position: relative;
+		font-family: "Raleway", sans-serif;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		color: #f7c935;
+		text-transform: uppercase;
+		-webkit-transition: 0.1s linear opacity;
+		transition: 0.1s linear opacity;
+		cursor: pointer;
   }
   .lang__text:hover {
 	opacity: 0.8;
@@ -1356,14 +1358,17 @@ body {
   }
 
   .all_tarifs-wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0 -15px;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		justify-content: center;
   }
 
   .tarif-wrapper {
-	width: 33.33333%;
-	padding: 0 15px;
+		min-width: 320px;
+		width: 33.33333%;
+		padding: 0 15px;
+		margin-bottom: 20px;
   }
 
   .tarif_name {
@@ -1540,6 +1545,7 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -15px;
+		justify-content: center;
 	}
 
 	.car_item {
@@ -1579,7 +1585,6 @@ body {
 		position: absolute;
 		content:"";
 		bottom: 64px;
-  		left: 0;
 		width: 255px;
 		height: 82px;
 		background-image: url(../images/select/golden_light.webp);
@@ -1589,11 +1594,12 @@ body {
 		z-index: -1;
 	}
 
+
+
 	.car_item label::after {
 		position: absolute;
 		content:"";
 		bottom: 57px;
-    	left: 0;
 		width: 255px;
 		height: 17px;
 		background-image: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22255%22%20height%3D%2217%22%20viewBox%3D%220%200%20255%2017%22%3E%3Cg%3E%3Cg%3E%3Cpath%20fill%3D%22%23262626%22%20d%3D%22M127.5.5C197.916.5%20255%204.194%20255%208.75S197.916%2017%20127.5%2017%200%2013.306%200%208.75%2057.084.5%20127.5.5z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E);
@@ -1622,16 +1628,25 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 1110px;
-		height: 122px;
+		flex-wrap: wrap;
+		width: 100%;
+		min-height: 122px;
 		border-radius: 10px;
 		background-color: #1c1c1c;
 		margin-bottom: 30px;
+		padding: 30px 30px 0 30px;
 	}
+
+	.calculator_select > * {
+		margin-bottom: 30px !important;
+	}
+
+	
 
 	.number_input {
 		display: block;
-		width: 255px;
+		max-width: 255px;
+		width: 100%;
 		height: 50px;
 		padding: 18px 20px;
 		margin-right: 30px;
@@ -1654,7 +1669,8 @@ body {
 	.price_select {
 		position: relative;
 		display: block;
-		width: 255px;
+		max-width: 255px;
+		width: 100%;
 		height: 50px;
 		padding: 12px 20px;
 		margin-right: 30px;
@@ -1694,6 +1710,27 @@ body {
 		box-shadow: 1px 1px 4px rgba(247, 201, 53, .5);
 	}
 
+	.year_select-container {
+		padding-bottom: 20px;
+	}
+
+	.year_text {
+		font-family: "Open Sans";
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+
+	.year_white  {
+		font-weight: 700;
+	}
+
+	.year_text_nums {
+		display: inline-block;
+		margin-left: 5px;
+		font-weight: 400;
+		opacity: .3;
+	}
+
 	.year_select-container .ui-slider {
 		width: 200px;
 		position: relative;
@@ -1720,22 +1757,20 @@ body {
 		background: #f7c935;
 	}
 
-	span.ui-corner-all.ui-slider-handle.ui-state-default::after {
-    content: "2000";
-    display: block;
-    position: absolute;
-    bottom: -30px;
-    right: -15px;
+	.ui-slider-horizontal .ui-slider-handle{
+		margin-left: -.7em;
+	}
+
+	.slider-range-value {
+		position: absolute;
     color: #f7c935;
+    top: 7px;
+    right: -16px;
     font-family: "Open Sans";
     font-size: 14px;
     font-weight: 400;
     line-height: 30px;
-	}
-
-	.ui-slider-horizontal .ui-slider-handle{
-		margin-left: -.7em;
-	}
+	} 
 
 	.polzunok-input-left,
 	.polzunok-input-right {
@@ -1784,7 +1819,7 @@ body {
 	.card_photo {
 		position: absolute;
 		top: -60px;
-  		left: 115px;
+		left: calc(50% - 60px);
 		width: 120px;
 		height: 120px;
 		border: 8px solid #010101;
@@ -1820,6 +1855,10 @@ body {
 
 	.reviews .slick-dots {
 		bottom: -72px;
+	}
+
+	.reviews .reviews_slider .slick-next {
+		top: 53.5%;
 	}
 
   .slick-arrow {
@@ -2064,6 +2103,57 @@ body {
 		width: unset;
 	}
 
+	.footer_news {
+		display: block;
+		position: relative;
+		font-family: "Raleway", sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 30px;
+		text-transform: uppercase;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		text-decoration: none;
+		color: #ffffff;
+		-webkit-transition: color 0.1s linear;
+		transition: color 0.1s linear;
+	}
+
+	.footer_news::after {
+		display: block;
+		position: absolute;
+		content: "";
+		top: 100%;
+		left: 0;
+		width: 78.89px;
+		height: 2px;
+		opacity: 0;
+		background-color: #f7c935;
+		-webkit-transition: opacity 0.1s linear;
+		transition: opacity 0.1s linear;
+  }
+  .footer_news:hover {
+		color: #f7c935;
+  }
+  .footer_news:hover::after {
+		opacity: 1;
+	}
+	
+	.footer_phone {
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		margin-right: 57px;
+		min-width: 170px;
+	}
+
 	.on_main {
 		color: #fff;
 		position: relative;
@@ -2076,8 +2166,8 @@ body {
 		-webkit-transition: color 0.1s linear;
 		transition: color 0.1s linear;
 		text-decoration: none;
-		}
-		.on_main::after {
+	}
+	.on_main::after {
 		display: block;
 		position: absolute;
 		content: "";
@@ -2089,13 +2179,13 @@ body {
 		background-color: #f7c935;
 		-webkit-transition: opacity 0.1s linear;
 		transition: opacity 0.1s linear;
-		}
-		.on_main:hover {
+	}
+	.on_main:hover {
 		color: #f7c935;
-		}
-		.on_main:hover::after {
+	}
+	.on_main:hover::after {
 		opacity: 1;
-		}
+	}
 
 	
 
@@ -2182,6 +2272,16 @@ body {
 	.our_work_item:nth-child(7), .our_work_item:nth-child(10){
 		border-left: none;
 	}
+
+	.car_item {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 1160px) {
+  .f .form_intro {
+		width: 97%;
+	}
 }
 
 @media only screen and (min-width: 1011px) {
@@ -2200,6 +2300,10 @@ body {
 
 	.header_news {
 		display: none;
+	}
+
+	.footer_news {
+		margin: 0 20px;
 	}
 
 	.header_phone {
@@ -2237,12 +2341,69 @@ body {
 		display: flex;
 		padding-bottom: 15px;
 	}
+
+	.inf .header_phone {
+		display: flex;
+	}
 }
 
 @media only screen and (max-width: 866px) {
 	/* Calculator */
 	.other_prices .prices_item {
 		width: 100%;
+	}
+
+	/* Footer */
+	.footer {
+		padding: 20px 0;
+		height: unset;
+	}
+
+	.footer-header {
+		flex-direction: column;
+	}
+
+	.footer-header .first_container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.footer-header .first_container > * {
+		margin-bottom: 15px;
+	}
+
+	.footer_news {
+		margin-bottom: 15px;
+	}
+
+	.footer-header .header_logo-wrap{
+		margin-right: 0;
+	}
+
+	.footer_phone {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+
+	.footer-header .second_container{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-header .second_container:first-child() {
+		margin-bottom: 15px;
+	}
+
+	.footer-header .case_of_lang {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+
+	.footer-header .social.i {
+		margin-left: 0;
+	}
+
+	.f .social_telegram {
+		margin-right: 0;
 	}
 
 }
@@ -2252,6 +2413,10 @@ body {
 
 	.second_container {
 		display: none;
+	}
+
+	.footer-header .second_container {
+		display: flex;
 	}
 
 	.menu_text {
@@ -2364,7 +2529,14 @@ body {
 		border-left: none;
 	}
 
+	/* Footer */
+	.footer-header .header_menu{
+		max-width: unset;
+	}
 
+	.f .form_intro {
+		width: unset;
+	}
 }
 
 @media only screen and (max-width: 646px) {
@@ -2374,6 +2546,23 @@ body {
 
 	.vehicle:not(:last-child) {
 		margin-bottom: 150px;
+	}
+
+	.car_item {
+		width: 100%;
+	}
+
+	.calculator_select {
+		flex-direction: column;
+	}
+
+	.calculator_select > *{
+		 margin-left:0 !important;
+		 margin-right: 0!important;
+	}
+
+	input.number_input,select.price_select {
+		max-width: unset;
 	}
 }
 
@@ -2404,6 +2593,24 @@ body {
 	.main_calc {
 		padding: 40px 40px;
 	}
+
+	.f .form_intro {
+		text-align: center;
+		padding: 17.5px 15px 13.5px 15px;
+		height: unset;
+	}
+
+	.f .form_title {
+		font-size: 22px;
+	}
+
+	.f form .btn_submit {
+		position: unset;
+		border: 1px solid #f7c935;
+		display: block;
+		margin: 15px auto;
+		
+	}
 }
 
 @media only screen and (max-width: 500px) {
@@ -2433,11 +2640,57 @@ body {
 	.intro form .text_form {
 		text-align: center;
 	}
+	
+	.car_item {
+		margin-bottom: 30px;
+	}
+
+	/* Contacts */
+
+	.contacts {
+		padding-bottom: 400px;
+	}
+
+	.contacts h2.title {
+		left: calc(50% - 71.5px);
+	}
+
+	.f {
+		bottom: -180px;
+	}
+
+	.f .form_intro {
+		left:0;
+		background-size:cover;
+	}
+
+	div .gm-style .gm-style-iw-c {
+		padding: 0;
+		text-align: center;
+		display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+
+	.container-info {
+		right: unset;
+		bottom: -20px;
+		width: unset;
+	}
+
+	.container.inf,
+	.container.f {
+		padding: 0%;
+	}
 
 	
 }
 
 @media only screen and (max-width: 420px) {
+	.title {
+		font-size: 23px;
+	}
+
 	.search_input {
 		font-size: 11px;
 	}
@@ -2492,4 +2745,26 @@ body {
 	.our_work_item:nth-child(10) {
 		border-bottom: none;
 	}
+
+	.card {
+		margin: 60px 5px 0 5px;
+	}
+
+
+	/* Reviews */
+
+	.reviews {
+		padding-bottom: 30px;
+	}
+
+	.reviews .slick-dots {
+		bottom: -60px;
+	}
+
+	.reviews .title {
+		padding: 45px 0 45px;
+	}
+	/* Contacts */
+
+	
 }
