@@ -1,7 +1,11 @@
+
 $(".lang__text").on("click", function(e) {
   e.preventDefault;
-  $(".lang-switch").toggleClass("active");
+  $(this)
+  	.parent()
+  	.toggleClass("active");
 });
+  
 
 $(".header_menu").on("click", function(e) {
   e.preventDefault;
@@ -81,6 +85,14 @@ $( function() {
 } );
 
 
+$(document).mouseup(function (e){
+var modalctr = $(".page-wrapper");
+var modal = $(".case_of_lang");
+if (!modal.is(e.target) && modal.has(e.target).length === 0){
+modal.removeClass("active");
+}
+});
+
 $(".examples__slider").slick({
   dots: true,
   infinite: true,
@@ -121,7 +133,7 @@ $(".reviews_slider").slick({
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 750,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
