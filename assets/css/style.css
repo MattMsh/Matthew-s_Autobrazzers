@@ -285,13 +285,7 @@ body {
 		width: 22px;
 		margin-right: 9px;
   }
-  .header_phone_icon {
-	width: 22px;
-	height: 22px;
-	background-image: url(../images/Shape_1.png);
-	background-repeat: no-repeat;
-	display: block;
-  }
+  
   .phone_number {
 	color: #ffffff;
 	font-family: "Open Sans", sans-serif;
